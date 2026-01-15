@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NextStep | Forum de Discussion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="whatsapp-body">
+
+    <div class="whatsapp-container">
+        
+        <header class="wa-header">
+            <a href="index.html" class="back-btn" title="Retour à l'accueil">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="profile-pic-box">
+                <img src="images/logo.png" alt="NextStep" class="wa-logo-small">
+            </div>
+            <div class="header-info">
+                <h4>Communauté NextStep 🇧🇯</h4>
+                <p>Israel, Amina, Kofi, +250 autres...</p>
+            </div>
+            <div class="header-icons">
+                <i class="fas fa-video"></i>
+                <i class="fas fa-phone"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </header>
+
+        <div id="chat-box" class="wa-chat-body">
+            <div class="system-msg">
+                <span>Les messages sont protégés par le projet NextStep</span>
+            </div>
+            </div>
+
+        <footer class="wa-input-area">
+            <div class="input-main-bar">
+                <button class="wa-icon-btn"><i class="far fa-smile"></i></button> <input type="text" id="wa-input" placeholder="Message" autocomplete="off">
+                <button class="wa-icon-btn"><i class="fas fa-paperclip"></i></button> <button class="wa-icon-btn"><i class="fas fa-camera"></i></button> </div>
+            <button class="wa-send-btn" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </footer>
+
+    </div>
+
+    <div style="position: fixed; bottom: 5px; width: 100%; text-align: center; font-size: 10px; color: #777; z-index: -1;">
+        Plateforme développée par SAHOUEGNON Israel Jules-Christ
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

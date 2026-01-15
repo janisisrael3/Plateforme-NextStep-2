@@ -1,0 +1,164 @@
+/* --- RESET ET BASES --- */
+:root {
+    --primary: #0052D4; /* Bleu puissant */
+    --accent: #4364F7; /* Dégradé */
+    --highlight: #6FB1FC; /* Lumière */
+    --dark: #1A1A2E;
+    --light: #F8F9FA;
+    --whatsapp-bg: #E5DDD5;
+    --whatsapp-sent: #DCF8C6;
+    --whatsapp-received: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.7; overflow-x: hidden; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; }
+.container { max-width: 1200px; margin: auto; padding: 0 20px; position: relative; }
+.section-padding { padding: 100px 0; }
+.center-text { text-align: center; }
+.bg-light { background-color: var(--light); }
+
+/* --- BOUTONS ET GRAPHISMES --- */
+.btn-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700;
+    box-shadow: 0 10px 20px -10px rgba(0,82,212,0.5); transition: all 0.3s; display: inline-block;
+}
+.btn-gradient:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -10px rgba(0,82,212,0.7); }
+.btn-large { padding: 15px 40px; font-size: 1.1rem; }
+
+/* --- NAVBAR --- */
+.navbar { padding: 20px 0; position: absolute; width: 100%; z-index: 100; background: transparent; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.brand-logo { height: 50px; }
+.nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: white; font-weight: 600; font-family: 'Montserrat', sans-serif; }
+.nav-links .btn-gradient { color: white !important; }
+
+/* --- HERO SECTION --- */
+.hero-section {
+    height: 90vh; background: url('images/hero_group.jpg') center/cover; position: relative; display: flex; align-items: center; color: white;
+}
+.overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); }
+.hero-content { z-index: 2; max-width: 800px; }
+.top-tag { background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+.hero-content h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; }
+.hero-text { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; }
+
+/* --- ABOUT SECTION --- */
+.split-layout { display: flex; gap: 60px; align-items: center; }
+.about-text-column { flex: 1; }
+.section-title { font-size: 2.5rem; margin-bottom: 30px; position: relative; display: inline-block; }
+.section-title::after { content:''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: var(--accent); }
+.lead-text { font-size: 1.3rem; font-weight: 600; color: var(--primary); margin-bottom: 20px; }
+.about-image-column { flex: 1; position: relative; }
+.graphic-box img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0 rgba(0,0,0,0.1); z-index: 1; position: relative; }
+.floating-card {
+    position: absolute; bottom: -30px; right: -20px; background: white; padding: 20px 30px;
+    border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); z-index: 2; display: flex; align-items: center; gap: 15px; font-weight: 700; color: var(--primary);
+}
+.floating-card i { font-size: 2rem; }
+
+/* --- FEATURES GRAPHIC --- */
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+.feature-card { background: white; padding: 40px 30px; border-radius: 20px; text-align: center; transition: 0.3s; border-bottom: 5px solid transparent; }
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-bottom: 5px solid var(--accent); }
+.icon-box { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; }
+.gradient-1 { background: linear-gradient(to right, #0052D4, #4364F7); }
+.gradient-2 { background: linear-gradient(to right, #11998e, #38ef7d); }
+.gradient-3 { background: linear-gradient(to right, #FC466B, #3F5EFB); }
+
+/* --- FOOTER --- */
+.main-footer { background: var(--dark); color: white; padding: 50px 0; }
+.footer-logo { height: 40px; margin-bottom: 20px; opacity: 0.8; }
+
+/* =========================================
+   STYLE SPÉCIFIQUE WHATSAPP (Discussion)
+   ========================================= */
+.whatsapp-body { background-color: #d0d0d0; height: 100vh; display: flex; justify-content: center; align-items: center; }
+.whatsapp-container {
+    width: 100%; max-width: 500px; height: 100vh; background: #fff; display: flex; flex-direction: column;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); position: relative;
+}
+
+/* Header WhatsApp */
+.wa-header {
+    background-color: #075E54; color: white; padding: 10px 15px; display: flex; align-items: center; gap: 10px;
+}
+.back-btn { color: white; text-decoration: none; font-size: 1.2rem; }
+.profile-pic { width: 40px; height: 40px; border-radius: 50%; background: #ddd; background-image: url('images/logo.png'); background-size: cover; }
+.header-info h4 { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0; }
+.header-info span { font-size: 0.8rem; opacity: 0.8; }
+.header-icons { margin-left: auto; display: flex; gap: 20px; font-size: 1.2rem; }
+
+/* Corps de la discussion */
+.wa-chat-body {
+    flex: 1; background-color: var(--whatsapp-bg);
+    /* Si tu as téléchargé whatsapp_bg.png, décommente la ligne ci-dessous */
+    /* background-image: url('images/whatsapp_bg.png'); */
+    background-blend-mode: soft-light;
+    overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 10px;
+}
+
+/* Bulles de message */
+.msg-bubble {
+    max-width: 80%; padding: 8px 12px; border-radius: 8px; position: relative; font-size: 0.95rem; line-height: 1.4;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1); margin-bottom: 5px;
+}
+.sent {
+    background-color: var(--whatsapp-sent); align-self: flex-end; border-top-right-radius: 0;
+}
+.sent::after { /* Le petit triangle vert */
+    content: ''; position: absolute; top: 0; right: -10px; width: 0; height: 0;
+    border-top: 10px solid var(--whatsapp-sent); border-right: 10px solid transparent;
+}
+.msg-time { display: block; font-size: 0.7rem; color: #999; text-align: right; margin-top: 4px; }
+
+/* Barre de saisie WhatsApp (Le plus important !) */
+.wa-input-area {
+    background: #F0F0F0; padding: 10px; display: flex; align-items: center; gap: 10px;
+}
+.wa-icon-btn {
+    color: #919191; font-size: 1.5rem; background: none; border: none; cursor: pointer; padding: 5px;
+}
+.input-wrapper {
+    flex: 1; background: white; border-radius: 20px; padding: 8px 15px; display: flex; align-items: center;
+}
+#wa-input {
+    flex: 1; border: none; outline: none; font-size: 1rem; font-family: 'Open Sans', sans-serif;
+}
+.wa-send-btn {
+    background: #075E54; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer;
+}
+.wa-send-btn:hover { background: #128C7E; }
+
+/* Responsive basic */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .split-layout { flex-direction: column; }
+    .features-grid { grid-template-columns: 1fr; }
+    .whatsapp-container { max-width: 100%; height: 100vh; }
+}
+
+/* --- STYLE INSCRIPTION --- */
+.signup-section { background-color: #f0f4f8; }
+.form-container { 
+    max-width: 500px; margin: auto; background: white; 
+    padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.form-header { text-align: center; margin-bottom: 30px; }
+.form-header h2 { color: var(--primary); font-size: 2rem; }
+
+.input-group { 
+    position: relative; margin-bottom: 20px; 
+}
+.input-group i { 
+    position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #aaa; 
+}
+.input-group input { 
+    width: 100%; padding: 15px 15px 15px 45px; border: 1px solid #ddd; 
+    border-radius: 10px; font-size: 1rem; outline: none; transition: 0.3s;
+}
+.input-group input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(0,82,212,0.1); }
+.full-width { width: 100%; padding: 15px; font-size: 1.1rem; cursor: pointer; border: none; }
